@@ -26,7 +26,7 @@ export default class ListTemplate implements DOMList{
       input.checked = element.checked
       listItem.appendChild(input)
       input.addEventListener("change", () => {
-        input.checked = !element.checked
+        element.checked = !element.checked
         fullList.save()
       })
       const label = document.createElement("label")
